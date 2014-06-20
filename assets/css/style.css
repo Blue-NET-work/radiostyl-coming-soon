@@ -1,0 +1,140 @@
+@charset "utf-8";
+/*
+Theme Name: Radio comming soon page
+Theme URI: http://Blue-NET.pl
+Theme Version: 4.31.1
+Author: Blue-NET Mateusz Serwinowski
+Author URI: http://Blue-NET.pl
+Description: Radio comming soon page theme by Blue-NET
+License: Custom
+License URI: URI: http://themeforest.net/licenses
+*/
+
+html, body{
+	min-height:100%;
+}
+
+body{
+	background:url(../img/bg.jpg) repeat;
+	border-top:9px solid #fb5a09;
+	color:#fff;
+}
+
+a, a:hover{color:#fff;}
+
+#wrapp{
+	background:url(../img/mic.jpg) no-repeat top right;
+	background-size:cover;
+	position:fixed;
+	margin-top:9px;
+	width:100%;
+	height:100%;
+	top:0px;
+	z-index:1;
+}
+
+#container{
+	position:relative;
+	z-index:10;
+	height:1015px;
+}
+
+#logo{
+	text-align:center;
+}
+
+#logo .logo{
+	display:block;
+	margin-bottom:-60px;
+}
+
+#ramowka{
+	margin:50px 0 40px;
+}
+
+
+.kanal{
+	position:relative;
+	background:url(../img/ramowka.png) no-repeat;
+	height:244px;
+	width:372px;
+}
+
+.kanal .typ{
+	position:absolute;
+	left:20px;
+	top:-30px;
+}
+
+.kanal .typ.krak{
+	left:-5px;
+	top:-50px;
+}
+
+.kanal .typ.disco{
+	left:0px;
+	top:-50px;
+}
+
+.kanal .play{
+	position:absolute;
+	top:-65px;
+	left:105px;
+}
+
+.kanal .play a{
+	display:block;
+	background:url(../img/play.png) no-repeat;
+	width:157px;
+	height:157px;
+}
+
+.kanal .play a:hover{
+	background:url(../img/play5.png) no-repeat;
+}
+
+.kanal .prezenter{
+	position:absolute;
+	width:85%;
+	top:80px;
+	left:30px;
+}
+
+.kanal .prezenter .row{
+	margin-bottom:5px;
+}
+
+.kanal .prezenter .text{
+	padding-top:5px;
+	font-size:12px;
+}
+
+footer{
+	position:absolute;
+	background:url(../img/bgFacebook.png) no-repeat center top;
+	text-align:center;
+	padding:50px 0;
+	z-index:10;
+	width:100%;
+	min-height:333px;
+	border:0;
+}
+
+#container .triangles #countdown_container{
+	max-width:780px;
+}
+
+#container .triangles #circular_countdown_days, 
+#container .triangles #circular_countdown_hours, 
+#container .triangles #circular_countdown_minutes, 
+#container .triangles #circular_countdown_seconds{
+	background:rgba(255,255,255,.3);
+}
+
+.fancybox-iframe table.ramka{
+	width:350px !important;
+}
+
+.fancybox:hover, .fancybox1:hover{
+	opacity:.8;
+}

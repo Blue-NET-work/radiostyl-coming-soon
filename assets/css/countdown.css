@@ -1,0 +1,296 @@
+/*
+Item Name : Circular Countdown jQuery Plugin
+Item URI : http://codecanyon.net/item/circular-countdown-jquery-plugin/3761921
+Author URI : http://codecanyon.net/user/Pixelworkshop/
+Version : 1.21
+*/
+
+
+
+/*
+
+Page styling (optionnal)
+
+*/
+
+
+
+/*  _______________________________________
+
+	COUNTDOWN
+    _______________________________________  */
+	
+
+
+/* 
+   IMPORTANT
+   The exact same width must be set to the #countdown_container and to the canvas
+   element #circular_countdown in the HTML markup !
+*/
+.triangles #countdown_container,
+.triangles #countdown_container * {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+.triangles #countdown_container {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	/*
+	Additional styling
+	*/
+	padding: 10px;
+	z-index: 100;
+}
+.triangles #countdown_container h1 {
+	/*font-family:Georgia, "Times New Roman", Times, serif;*/
+	font-size:28px;
+	font-weight: normal;
+	font-style:italic;
+	text-align:center;
+	color:#ffffff;
+	line-height:30px;
+	margin:0 auto 10px auto;
+	text-align:center;
+}
+
+.triangles #countdown_timer,
+.triangles #countdown_timer ul,
+.triangles #circular_countdown {
+	position: relative;
+	width:100%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+.triangles #countdown_clock {
+	width:100%;
+	position:relative;
+	z-index:1;
+	margin: 45px 0 20px;
+	padding:0;
+}
+.triangles #circular_countdown_days,
+.triangles #circular_countdown_hours,
+.triangles #circular_countdown_minutes,
+.triangles #circular_countdown_seconds {
+	position:relative;
+	z-index:1;
+	padding:0;
+	width: 160px;
+	left: auto;
+	background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transform: all 0.5s;
+	transition: all 0.5s;
+}
+.triangles #circular_countdown_days:hover,
+.triangles #circular_countdown_hours:hover,
+.triangles #circular_countdown_minutes:hover,
+.triangles #circular_countdown_seconds:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+.triangles #circular_countdown_days {
+	margin:0 37px 0 15px;
+}
+.triangles #circular_countdown_hours {
+	margin: 0 37px 0 0;
+}
+.triangles #circular_countdown_minutes {
+	margin: 0 37px 0 0;
+}
+.triangles #circular_countdown_seconds {
+	margin: 0;
+}
+.triangles #countdown_timer {
+	width: 780px;
+}
+.triangles #countdown_timer li {
+	list-style: none;
+	padding: 10px 10px 10px 15px;
+	margin-top: 92px;
+	float: left;
+	width: 160px;
+	color:#6e6e6f;
+	font-size: 11px;
+	position: absolute;
+	text-align: center;
+	text-transform:uppercase;
+}
+.triangles #countdown_timer li.days {
+	left:0px;
+}
+.triangles #countdown_timer li.hours {
+	left:200px;
+}
+.triangles #countdown_timer li.minutes {
+	left:400px;
+}
+.triangles #countdown_timer li.seconds {
+	left:600px;
+}
+.triangles #countdown_timer li em {
+	display: block;
+	font-size: 45px;
+	line-height:40px;
+	font-weight:bold;
+	font-style: normal;
+	padding:0;
+}
+
+
+/*
+Markup to keep a decent layout under IE8 and below
+*/
+
+/* IE8 */
+
+@media \0screen {
+	.triangles #countdown_timer {
+		height: 130px;
+	}
+	.triangles #countdown_container h1 {
+		margin:0 auto;
+	}
+}
+
+/* IE7 and below */
+
+.triangles #countdown_timer {
+	*height: 130px;
+}
+.triangles #countdown_container h1 {
+	*margin:0 auto;
+}
+
+
+@media screen and (min-width: 1025px) {
+	
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	.triangles #countdown_container {
+		width: 680px;
+		padding-left: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.triangles #circular_countdown_days,
+	.triangles #circular_countdown_hours,
+	.triangles #circular_countdown_minutes,
+	.triangles #circular_countdown_seconds {
+		width: 130px;
+		height: 130px;
+	}
+	.triangles #countdown_timer li {
+		top: -15px;
+		margin-left: -25px;
+	}
+	.triangles #countdown_timer li.days {
+		left:0;
+	}
+	.triangles #countdown_timer li.hours {
+		left:170px;
+	}
+	.triangles #countdown_timer li.minutes {
+		left:340px;
+	}
+	.triangles #countdown_timer li.seconds {
+		left:510px;
+	}
+
+	.triangles #countdown_timer li em {
+		font-size: 35px;
+	}
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	.triangles #countdown_container {
+		width: 300px;
+	}
+	.triangles #countdown_timer {
+		z-index:2;
+		width: 300px;
+	}
+	.triangles #countdown_container h1 {
+		font-size:23px;
+	}
+	.triangles #countdown_timer li.days,
+	.triangles #countdown_timer li.hours,
+	.triangles #countdown_timer li.minutes,
+	.triangles #countdown_timer li.seconds {
+		left:auto;
+		margin-left: 35px;
+	}
+	.triangles #countdown_timer li.days {
+		top:0;
+	}
+	.triangles #countdown_timer li.hours {
+		top:183px;
+	}
+	.triangles #countdown_timer li.minutes {
+		top:370px;
+	}
+	.triangles #countdown_timer li.seconds {
+		top:557px;
+	}
+	.triangles #circular_countdown_days,
+	.triangles #circular_countdown_hours,
+	.triangles #circular_countdown_minutes,
+	.triangles #circular_countdown_seconds {
+		clear: left;
+		margin: 0 0 20px 0;
+	}
+
+}
+
+
+@media only screen and (max-width: 479px) {
+
+	.triangles #countdown_container {
+		width: 240px;
+		padding: 20px 0;
+	}
+	.triangles #countdown_timer {
+		width: 260px;
+	}
+	.triangles #countdown_container h1 {
+		font-size:18px;
+	}
+	.triangles #countdown_timer li.days,
+	.triangles #countdown_timer li.hours,
+	.triangles #countdown_timer li.minutes,
+	.triangles #countdown_timer li.seconds {
+		left: 5px;
+	}
+	.triangles #countdown_timer li.days {
+		top:0;
+	}
+	.triangles #countdown_timer li.hours {
+		top:183px;
+	}
+	.triangles #countdown_timer li.minutes {
+		top:370px;
+	}
+	.triangles #countdown_timer li.seconds {
+		top:557px;
+	}
+	.triangles #circular_countdown_days,
+	.triangles #circular_countdown_hours,
+	.triangles #circular_countdown_minutes,
+	.triangles #circular_countdown_seconds {
+		clear: left;
+		margin: 0 0 20px 0;
+	}
+
+}
